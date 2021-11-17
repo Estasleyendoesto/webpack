@@ -1,6 +1,5 @@
 const path = require("path");
 
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const toml = require('toml');
@@ -17,6 +16,7 @@ return {
     output: {
         filename: devMode ? '[name].js' : '[name].[contenthash].js',
         path: path.resolve(__dirname, 'dist'),
+        clean: true,
     },
     module: {
         rules: [
@@ -76,10 +76,8 @@ return {
         splitChunks: { chunks: "all" }
     },
     plugins: [
-        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, "src", "index.html"),
-            favicon: "./src/favicon.ico"
         }),
         new MiniCssExtractPlugin({
             filename: devMode ? '[name].css' : '[name].[contenthash].css',

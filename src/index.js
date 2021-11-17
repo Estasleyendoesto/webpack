@@ -1,10 +1,13 @@
 import "./style.css";
 import "./style.scss";
 
-console.log("It's alive!");
+/*
+...
+*/
+import Gorilla from "./img/gorilla.jpg";
+{
+    const img = document.getElementById("gorilla");
+    img.src = Gorilla;
+}
 
-const fancyFunc = () => {
-    return [1, 2];
-};
-    
-const [a, b] = fancyFunc();
+console.log("It's alive!");

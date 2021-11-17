@@ -7,3 +7,36 @@ body {
   font-family: $font;
   color: $primary-color;
 }
+
+@keyframes disolve {
+  0% {opacity: 1;}
+  50% {opacity: 0.5;}
+  100% {opacity: 1;}
+}
+
+div.container {
+  transform: translateY(80%);
+
+  img#gorilla {
+    display: block;
+    box-shadow: 1px 1px 10px 0px rgba($color: #1a1930, $alpha: 0.4);
+    border: 2px solid #cfcfcf;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 16%;
+    height: auto;
+  
+    animation-name: disolve;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+  }
+  
+  p {
+    text-align: center;
+    font-size: 1.2em;
+    opacity: 0.6;
+  }
+
+}
+

@@ -2,11 +2,11 @@
   "name": "webpack",
   "version": "1.0.0",
   "description": "base",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "start": "webpack serve --open 'Opera' --mode development"
+    "start": "webpack serve --open firefox --mode development"
   },
   "keywords": [],
   "author": "Robert Silva",
@@ -30,5 +30,6 @@
     "webpack-dev-server": "^3.11.2",
     "xml-loader": "^1.2.1",
     "yamljs": "^0.3.0"
-  }
+  },
+  "dependencies": {}
 }
